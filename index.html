@@ -9,7 +9,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS';
     background: linear-gradient(to bottom, #ff9ec4, #ffcce6);
     overflow: hidden;
     text-align: center;
@@ -102,10 +102,6 @@ button:hover { transform: scale(1.1); }
     </div>
 </div>
 
-<div class="tap-note">
-    🎵 Tap anywhere to start the music
-</div>
-
 <!-- Background Music -->
 <iframe id="music"
 width="0" height="0"
@@ -116,13 +112,6 @@ allow="autoplay">
 
 <script>
 let musicStarted = false;
-
-function playMusic() {
-    if (!musicStarted) {
-        document.getElementById("music").src += "&autoplay=1";
-        musicStarted = true;
-    }
-}
 
 function sayYes() {
     document.getElementById("popup").style.display = "block";
